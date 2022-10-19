@@ -1,12 +1,8 @@
 main:
   # - title: "About"
   #   url: /about/
-  - title: "Blog"
-    url: /posts/
   - title: "Publications"
     url: /publications/
-  - title: "Mentoring"
-    url: /mentoring/
   # - title: "Categories"
   #   url: /categories/
   # - title: "Tags"
