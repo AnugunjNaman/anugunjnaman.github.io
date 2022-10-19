@@ -21,7 +21,7 @@ timezone: Asia/Calcutta
 include:
   - _pages
 
-http://ipa-reader.xyz/?text=%CA%8Cn%CA%8Ag%CA%8And%CA%92%20n%CA%8Cm%CC%A5%CA%8Cn&voice=Raveena
+
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
