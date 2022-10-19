@@ -21,7 +21,7 @@ timezone: Asia/Calcutta
 include:
   - _pages
 
-
+http://ipa-reader.xyz/?text=%CA%8Cn%CA%8Ag%CA%8And%CA%92%20n%CA%8Cm%CC%A5%CA%8Cn&voice=Raveena
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -34,8 +34,8 @@ plugins:
 author:
   name   : " "
   avatar : "/assets/images/profile.jpeg"
-  bio    : "ʌnʊgʊndʒ nʌm̥ʌn"
-  llinks:
+  bio    : "Anugunj Naman"
+  links:
 
     - label: "Pronunciation"
       icon: "fas fa-volume-up"
@@ -48,13 +48,13 @@ author:
       url: "https://twitter.com/AnugunjN"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/AnugunjNaman"
+      url: "https://github.com/anugunjnaman"
     - label: "Email"
       icon: "fas fa-envelope"
       url: "mailto:anugunjjha@gmail.com"
     - label: "Google Scholar"
       icon: "fas fa-graduation-cap"
-      url: "https://scholar.google.com/citations?user=hcr7SAMAAAAJ&hl=en"
+      url: "https://scholar.google.com/citations?user=CJIKhNIAAAAJ&hl=en"
 defaults:
   # _posts
   - scope:
