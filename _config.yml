@@ -1,54 +1,27 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Suchin Gururangan
-email: sg01@cs.washington.edu
+title: Anugunj Naman
+email: anugunjjha@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-twitter_username: ssgrn
-github_username: kernelmachine
+twitter_username: AnugunjN
+github_username: anugunjnaman
 minimal_mistakes_skin: default
 search: false
 
-# Build settings
+
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
-# Outputting
+
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 5 
 paginate_path: /page:num/
-timezone: America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Calcutta 
 
 include:
   - _pages
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
 
-# Plugins (previously gems:)
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -57,33 +30,31 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
+
 author:
   name   : " "
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "sʌtʃɪn gʊɹʊɹʌngʊn"
-  links:
+  avatar : "/assets/images/profile.jpeg"
+  bio    : "ʌnʊgʊndʒ nʌm̥ʌn"
+  llinks:
 
     - label: "Pronunciation"
       icon: "fas fa-volume-up"
-      url: "http://ipa-reader.xyz/?text=s%CA%8Ct%CA%83%C9%AAn%20g%CA%8A%C9%B9%CA%8A%C9%B9%CA%8Cng%CA%8An&voice=Raveena"
+      url: "http://ipa-reader.xyz/?text=%CA%8Cn%CA%8Ag%CA%8And%CA%92%20n%CA%8Cm%CC%A5%CA%8Cn&voice=Raveena"
     - label: "Prounouns"
       icon: "fas fa-user-alt"
       url: "https://pronoun.is/he"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/ssgrn"
+      url: "https://twitter.com/AnugunjN"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/kernelmachine"
+      url: "https://github.com/AnugunjNaman"
     - label: "Email"
       icon: "fas fa-envelope"
-      url: "mailto:sg01@cs.washington.edu"
-    - label: "Semantic Scholar"
-      icon: "fas fa-book-open"
-      url: "https://www.semanticscholar.org/author/Suchin-Gururangan/40895369"
+      url: "mailto:anugunjjha@gmail.com"
     - label: "Google Scholar"
       icon: "fas fa-graduation-cap"
-      url: "https://scholar.google.com/citations?user=CJIKhNIAAAAJ&hl=en"
+      url: "https://scholar.google.com/citations?user=hcr7SAMAAAAJ&hl=en"
 defaults:
   # _posts
   - scope:
