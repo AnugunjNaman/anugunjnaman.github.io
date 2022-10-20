@@ -1,0 +1,16 @@
+{% capture paper_details %}
+<p>
+    <strong><a href='{{include.paper_link}}'>{{include.title}}</a></strong><br>
+    {% for auth in include.authors %}
+    {% if auth == "Saujas Vaduguru" %}<strong>{{auth}}</strong>{% else %}{{auth}}{% endif %}{% unless forloop.last %}, {% endunless %}
+    {% endfor %}<br>
+    <em>{{include.venue}}, {{include.date | date: '%Y' }}.</em><br>
+    {% if include.links != "" and include.links != nil %}
+        {% for link in include.links %}
+        [<a href="{{link[1]}}">{{link[0]}}</a>]{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+    {% endif %}
+</p>
+{% endcapture %}
+
+{{paper_details}}

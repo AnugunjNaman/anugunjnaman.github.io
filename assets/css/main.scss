@@ -1,17 +1,21 @@
-@import "minimal-mistakes";
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
 
-html {
-  font-size: 10px; // change to whatever
+@charset "utf-8";
 
-  @include breakpoint($medium) {
-    font-size: 12px; // change to whatever
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+span.small-caps {
+    font-variant-caps: small-caps;
   }
 
-  @include breakpoint($large) {
-    font-size: 12px; // change to whatever
-  }
-
-  @include breakpoint($x-large) {
-    font-size: 16px; // change to whatever
-  }
+div.cvitem {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.0em;
+    position: relative; 
+    text-align: left;
 }
