@@ -10,12 +10,6 @@ permalink: /cv/
 <a href="https://github.com/AnugunjNaman"><i class="fa-brands fa-github"></i> AnugunjNaman</a>
 
 
-<h2>Publications</h2>
-{% include publications.html
-    publications=site.data.publications
-    numbering=true
-%}
-
 <!-- <h2>Honors and Awards</h2>
 <div class="cvitem">
 <span class="small-caps">Mitacs</span> Globalink Research Internship, 2021
