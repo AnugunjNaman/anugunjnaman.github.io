@@ -6,35 +6,9 @@ permalink: /cv/
 
 <a href="/assets/Resume_Naman.pdf"><i class="fa-solid fa-file-pdf"></i> View PDF</a><br>
 <a href="https://anugunjnaman.github.io/"><i class="fa-solid fa-globe"></i> anugunjnaman.github.io</a><br>
-<a href=""><i class="fa-solid fa-envelope"></i> svadugur [AT] cs [DOT] cmu [DOT] edu</a><br>
+<a href=""><i class="fa-solid fa-envelope"></i> anugunjjha@gmail.com</a><br>
 <a href="https://github.com/AnugunjNaman"><i class="fa-brands fa-github"></i> AnugunjNaman</a>
 
-
-<h2>Education</h2>
-<div class="cvitem">
-<strong>B.Tech in Computer Science and Engineering</strong>, 2018–2022<br>
-<em>Dept. of Computer Science, IIIT, Guwahati</em>
-<!--BB -HH<br><span class="small-caps">Advisor:</span> Daniel Fried<br>J -->
-</div>
-
-<h2>Former Positions</h2>
-<div class="cvitem">
-<strong>Machine Learning Intern</strong>, NVIDIA, <em>Bengaluru, India</em>, Jul 2020–May 2021<br>
-    <span class="small-caps">Supervisior:</span> Kumari Deepshikha<br>
-    <ul>
-    <li>Research on Application of GAN’s for Class Imbalance and Automatic Speech Recognition</li>
-    <li style="list-style-type:none"><span class="small-caps">Skills:</span> Python, Pytorch.
-    </ul>
-</div>
-
-<div class="cvitem">
-<strong>Research Intern</strong>, AI-ML-NLP Lab, <span class="small-caps"><em>IIT Patna, India</em></span>, Apr 2020–Jul 2020<br>
-    <span class="small-caps">Advisors:</span> Sriparna Saha and Pushpak Bhattacharyya<br>
-    <ul>
-    <li>Research on Author Profiling of Tweets for Gender, Age, Region, etc.</li>
-    <li style="list-style-type:none"><span class="small-caps">Skills:</span> Python, PyTorch, HuggingFace Transformers</li>
-    </ul>
-</div>
 
 <h2>Publications</h2>
 {% include publications.html
