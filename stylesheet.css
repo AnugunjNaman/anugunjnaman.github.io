@@ -129,3 +129,8 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+img { 
+    border-radius: 150%; 
+    width: 100px;
+    height: 100px;
+}
