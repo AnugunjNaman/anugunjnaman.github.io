@@ -64,13 +64,10 @@
             <div class="col-md-2 col-sm-2 sidebar">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" onclick="loadPost('front')">Hi</a>
+                        <a class="nav-link active" href="#" onclick="loadPost('front')">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="loadPost('post1')">Summer Brilliance</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="loadPost('post2')">Post 2</a>
                     </li>
                 </ul>
             </div>
@@ -84,47 +81,41 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script>
         function loadPost(postId) {
-            const posts = {
-                'front': {
-                    title: "Hi, I'm Anugunj Naman",
-                    date: 'April 6, 2024',
-                    content: `Welcome to Scribbled Echoes. Here, you'll find a collection of my short poems, stories and other thoughts, each a reflection of different moments and moods.`
-                },
-                'post1': {
-                    title: "<h2>Summer Brilliance</h2>",
-                    date: 'May 5, 2024',
-                    content: `
-                                <p>In the blaze of a bright summer noon,<br>
-                                where spring whispers its final tune,<br>
-                                there dances a vision in white,<br>
-                                a woman whose beauty ignites the light.</p>
+            if (postId === 'front') {
+                document.getElementById('postContent').innerHTML = `
+                    <h1>Hi, I'm Anugunj Naman</h1>
+                    <p><small>April 6, 2024</small></p>
+                    <p>Welcome to Scribbled Echoes. Here, you'll find a collection of my short poems, stories and other thoughts, each a reflection of different moments and moods.</p>
+                `;
+            } else if (postId === 'post1') {
+                document.getElementById('postContent').innerHTML = `
+                    <h1>Summer Brilliance</h1>
+                    <p><small>May 6, 2024</small></p>
+                    <p>In the blaze of a bright summer noon,<br>
+                    where spring whispers its final tune,<br>
+                    there dances a vision in white,<br>
+                    a woman whose beauty ignites the light.</p>
 
-                                <p>Her smile, a balm to my solitude,<br>
-                                warms the chill of my quietude.<br>
-                                Yet deepens the ache for her embrace,<br>
-                                a longing born from a distant space.</p>
+                    <p>Her smile, a balm to my solitude,<br>
+                    warms the chill of my quietude.<br>
+                    Yet deepens the ache for her embrace,<br>
+                    a longing born from a distant space.</p>
 
-                                <p>Never have words passed between,<br>
-                                only dreams from afar have been seen.<br>
-                                She haunts me with a ghostly grace,<br>
-                                her absence a void no one can replace.</p>
+                    <p>Never have words passed between,<br>
+                    only dreams from afar have been seen.<br>
+                    She haunts me with a ghostly grace,<br>
+                    her absence a void no one can replace.</p>
 
-                                <p>Oh, to speak and find her less,<br>
-                                to break the spell of her finesse.<br>
-                                Or to hear her voice, a soothing balm,<br>
-                                where limerence blossoms into calm.</p>
+                    <p>Oh, to speak and find her less,<br>
+                    to break the spell of her finesse.<br>
+                    Or to hear her voice, a soothing balm,<br>
+                    where limerence blossoms into calm.</p>
 
-                                <p>May her melody turn my despair<br>
-                                into a love beyond compare.<br>
-                                In her gaze, may I find my haven,<br>
-                                and life turn, at last, to heaven.</p>
-                            `
-                },
-            };
-
-            if (posts[postId]) {
-                const post = posts[postId];
-                $('#postContent').html(`<h1>${post.title}</h1><p><small>${post.date}</small></p><p>${post.content}</p>`);
+                    <p>May her melody turn my despair<br>
+                    into a love beyond compare.<br>
+                    In her gaze, may I find my haven,<br>
+                    and life turn, at last, to heaven.</p>
+                `;
             }
         }
 
