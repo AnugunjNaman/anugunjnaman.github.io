@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scribbled Echoes</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container-fluid {
+            height: 100%;
+        }
+        .header {
+            width: 100%;
+            background: white;
+            color: #333;
+            padding: 25px 20px;
+            text-align: center;
+        }
+        .sidebar {
+            margin-top: 20px;
+            background-color: white;
+            border-right: 2px solid white;
+            overflow-y: auto;
+            height: calc(100%);
+        }
+        .content {
+            padding: 20px;
+            overflow-y: auto;
+            height: calc(100%);
+        }
+        .nav-link {
+            color: #333;
+        }
+        .nav-link:hover {
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Scribbled Echoes</h1>
+    </div>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-md-2 col-sm-2 sidebar">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" onclick="loadPost('front')">Hi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="loadPost('post1')">Summer Brilliance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="loadPost('post2')">Post 2</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-10 col-sm-8 content" id="postContent">
+                <h2>Welcome to Scribbled Echoes</h2>
+                <p>Select a post from the left to read.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+        function loadPost(postId) {
+            fetch(`${postId}.html`)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('postContent').innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Failed to load the post:', error);
+                    document.getElementById('postContent').innerHTML = '<p>Failed to load post. Please try again later.</p>';
+                });
+        }
+
+        // Load the latest post by default on page load
+        window.onload = function() {
+            loadPost('front');
+        };
+    </script>
+</body>
+</html>
