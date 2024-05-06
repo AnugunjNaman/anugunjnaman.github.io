@@ -1,47 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scribbled Echoes</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body, html {
+        body,
+        html {
             height: 100%;
             margin: 0;
             font-family: Arial, sans-serif;
         }
+
         .container-fluid {
             height: 100%;
         }
+
         .header {
             width: 100%;
             background: white;
             color: #333;
+            /* Dark grey color for text */
             padding: 25px 20px;
             text-align: center;
         }
+
         .sidebar {
             margin-top: 20px;
             background-color: white;
             border-right: 2px solid white;
             overflow-y: auto;
             height: calc(100%);
+            /* Adjust height considering the header */
         }
+
         .content {
             padding: 20px;
             overflow-y: auto;
             height: calc(100%);
+            /* Adjust height considering the header */
         }
+
+        /* Ensure the sidebar links are visually appealing */
         .nav-link {
             color: #333;
         }
+
         .nav-link:hover {
             text-decoration: none;
             color: #000;
         }
     </style>
 </head>
+
 <body>
     <div class="header">
         <h1>Scribbled Echoes</h1>
@@ -71,21 +84,55 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script>
         function loadPost(postId) {
-            fetch(`${postId}.html`)
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById('postContent').innerHTML = html;
-                })
-                .catch(error => {
-                    console.error('Failed to load the post:', error);
-                    document.getElementById('postContent').innerHTML = '<p>Failed to load post. Please try again later.</p>';
-                });
+            const posts = {
+                'front': {
+                    title: "Hi, I'm Anugunj Naman",
+                    date: 'April 6, 2024',
+                    content: `Welcome to Scribbled Echoes. Here, you'll find a collection of my short poems, stories and other thoughts, each a reflection of different moments and moods.`
+                },
+                'post1': {
+                    title: "<h2>Summer Brilliance</h2>",
+                    date: 'May 5, 2024',
+                    content: `
+                                <p>In the blaze of a bright summer noon,<br>
+                                where spring whispers its final tune,<br>
+                                there dances a vision in white,<br>
+                                a woman whose beauty ignites the light.</p>
+
+                                <p>Her smile, a balm to my solitude,<br>
+                                warms the chill of my quietude.<br>
+                                Yet deepens the ache for her embrace,<br>
+                                a longing born from a distant space.</p>
+
+                                <p>Never have words passed between,<br>
+                                only dreams from afar have been seen.<br>
+                                She haunts me with a ghostly grace,<br>
+                                her absence a void no one can replace.</p>
+
+                                <p>Oh, to speak and find her less,<br>
+                                to break the spell of her finesse.<br>
+                                Or to hear her voice, a soothing balm,<br>
+                                where limerence blossoms into calm.</p>
+
+                                <p>May her melody turn my despair<br>
+                                into a love beyond compare.<br>
+                                In her gaze, may I find my haven,<br>
+                                and life turn, at last, to heaven.</p>
+                            `
+                },
+            };
+
+            if (posts[postId]) {
+                const post = posts[postId];
+                $('#postContent').html(`<h1>${post.title}</h1><p><small>${post.date}</small></p><p>${post.content}</p>`);
+            }
         }
 
         // Load the latest post by default on page load
-        window.onload = function() {
+        window.onload = function () {
             loadPost('front');
         };
     </script>
 </body>
+
 </html>
